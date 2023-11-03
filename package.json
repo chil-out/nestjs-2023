@@ -1,0 +1,43 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "build-all":"pnpm run --parallel -r build",
+    "nx-build-all":"nx run-many --target=build",
+    "lint": "node node_modules/prettier/bin-prettier --check \"**/*.{js,json,ts,yml,yaml}\"",
+    "prepare": "husky install",
+    "prettier": "node node_modules/prettier/bin-prettier --check '**/*.{js,json,ts,yml,yaml}'",
+    "prettier:write": "node node_modules/prettier/bin-prettier --write \"**/*.{js,json,ts,yml,yaml}\""
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "commitizen": "^4.3.0",
+    "conventional-changelog-cli": "^4.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+		"eslint": "^8.52.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-config-next": "14.0.1",
+    "fbjs-scripts": "^3.0.1",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "nx": "^17.0.2",
+    "prettier": "^3.0.3",
+    "prettier-plugin-svelte": "^3.0.3",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "eslint-config-next": "^14.0.1",
+    "eslint-config-prettier": "^9.0.0"
+  }
+}
